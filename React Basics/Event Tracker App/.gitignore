@@ -1,0 +1,7 @@
+nodes_modules
+dist
+.DS_Store
+*.local
+.env
+.env.local
+.env.*.local

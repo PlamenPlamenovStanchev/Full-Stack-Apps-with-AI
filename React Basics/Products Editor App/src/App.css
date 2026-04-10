@@ -1,0 +1,14 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-exit {
+  opacity: 0;
+}

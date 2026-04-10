@@ -1,0 +1,58 @@
+import { Product } from '../types/Product'
+
+export const SAMPLE_PRODUCTS: Product[] = [
+  {
+    id: '1',
+    name: 'MacBook Pro 14"',
+    description: 'High-performance laptop with M3 Max chip for professionals',
+    photoUrl: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop',
+    price: 1999.99,
+    currency: 'USD',
+    unit: 'piece',
+  },
+  {
+    id: '2',
+    name: 'Wireless Mouse',
+    description: 'Ergonomic wireless mouse with 2.4GHz connection',
+    photoUrl: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=300&fit=crop',
+    price: 29.99,
+    currency: 'USD',
+    unit: 'piece',
+  },
+  {
+    id: '3',
+    name: 'Mechanical Keyboard',
+    description: 'RGB backlit mechanical keyboard with hot-swappable switches',
+    photoUrl: 'https://images.unsplash.com/photo-1587829191301-4c3e8b24e92d?w=400&h=300&fit=crop',
+    price: 149.99,
+    currency: 'USD',
+    unit: 'piece',
+  },
+  {
+    id: '4',
+    name: '4K Monitor',
+    description: '27-inch 4K USB-C monitor with built-in speakers',
+    photoUrl: 'https://images.unsplash.com/photo-1599481238640-4c1288ca8ef1?w=400&h=300&fit=crop',
+    price: 599.99,
+    currency: 'USD',
+    unit: 'piece',
+  },
+  {
+    id: '5',
+    name: 'USB-C Hub',
+    description: '7-in-1 USB-C hub with HDMI, USB 3.0, and SD card reader',
+    photoUrl: 'https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&h=300&fit=crop',
+    price: 49.99,
+    currency: 'USD',
+    unit: 'piece',
+  },
+  {
+    id: '6',
+    name: 'Webcam 1080p',
+    description: 'Professional 1080p webcam with auto-focus and built-in mic',
+    photoUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=300&fit=crop',
+    price: 79.99,
+    currency: 'USD',
+    unit: 'piece',
+  },
+]

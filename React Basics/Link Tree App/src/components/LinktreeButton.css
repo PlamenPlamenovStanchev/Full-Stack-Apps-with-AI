@@ -1,0 +1,289 @@
+.linktree-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 20px;
+  margin: 8px 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.linktree-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.linktree-button:hover::before {
+  left: 100%;
+}
+
+.linktree-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.button-icon {
+  font-size: 28px;
+  color: white;
+  flex-shrink: 0;
+  min-width: 28px;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.button-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-edit {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 12px;
+  position: relative;
+  z-index: 3;
+}
+
+.linktree-button:hover .button-edit {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.button-edit:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+/* Edit Mode Styles */
+.linktree-button-edit {
+  width: 100%;
+  padding: 12px 0;
+  margin: 8px 0;
+}
+
+.edit-form-link {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.form-input,
+.form-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.form-select option {
+  background: #333;
+  color: white;
+}
+
+.error-message {
+  background: rgba(244, 67, 54, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-save,
+.btn-cancel,
+.btn-delete {
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-save {
+  background: rgba(76, 175, 80, 0.8);
+  color: white;
+}
+
+.btn-save:hover {
+  background: rgba(76, 175, 80, 1);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-cancel {
+  background: rgba(158, 158, 158, 0.8);
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: rgba(158, 158, 158, 1);
+  box-shadow: 0 4px 12px rgba(158, 158, 158, 0.3);
+}
+
+.btn-delete {
+  background: rgba(244, 67, 54, 0.8);
+  color: white;
+}
+
+.btn-delete:hover {
+  background: rgba(244, 67, 54, 1);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .linktree-button {
+    padding: 14px 16px;
+    margin: 6px 0;
+  }
+
+  .button-content {
+    gap: 12px;
+  }
+
+  .button-icon {
+    font-size: 24px;
+  }
+
+  .button-title {
+    font-size: 14px;
+  }
+
+  .button-label {
+    font-size: 11px;
+  }
+
+  .button-edit {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .edit-form-link {
+    padding: 16px;
+  }
+
+  .edit-actions {
+    gap: 6px;
+  }
+
+  .btn-save,
+  .btn-cancel,
+  .btn-delete {
+    min-width: 60px;
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+}

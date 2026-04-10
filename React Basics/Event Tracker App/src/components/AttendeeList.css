@@ -1,0 +1,173 @@
+.attendee-table-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-top: 24px;
+}
+
+.attendee-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.attendee-table thead {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+}
+
+.attendee-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+.attendee-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.attendee-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.attendee-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.attendee-table td {
+  padding: 16px;
+  vertical-align: middle;
+}
+
+.attendee-name {
+  font-weight: 500;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.attendee-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.attendee-contact svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.edit-btn {
+  background: #dbeafe;
+  color: var(--primary);
+}
+
+.edit-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.delete-btn:hover {
+  background: var(--danger);
+  color: white;
+  transform: scale(1.05);
+}
+
+.empty-state {
+  padding: 60px 20px;
+  text-align: center;
+  color: #6b7280;
+  margin-top: 24px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+  opacity: 0.8;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .attendee-table {
+    font-size: 12px;
+  }
+
+  .attendee-table th,
+  .attendee-table td {
+    padding: 12px 8px;
+  }
+
+  .attendee-contact {
+    font-size: 12px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 6px;
+  }
+
+  .edit-btn svg,
+  .delete-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Stack actions vertically on small screens */
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .attendee-table th:nth-child(3),
+  .attendee-table td:nth-child(3) {
+    display: none;
+  }
+}

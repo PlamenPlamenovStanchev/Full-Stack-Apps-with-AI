@@ -1,0 +1,32 @@
+.add-venue-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 24px;
+  margin-top: 16px;
+}
+
+.add-venue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.add-venue-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .add-venue-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
