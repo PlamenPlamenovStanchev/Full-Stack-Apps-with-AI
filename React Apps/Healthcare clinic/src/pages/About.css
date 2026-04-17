@@ -1,0 +1,253 @@
+/* Mission Section */
+.mission-section {
+  background-color: var(--bg-white);
+}
+
+.mission-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  animation: slideInUp 0.6s ease-out;
+}
+
+.mission-text h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.mission-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+}
+
+.mission-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-icon {
+  font-size: 8rem;
+  animation: slideInDown 0.6s ease-out;
+}
+
+/* Values Section */
+.values-section {
+  background-color: var(--bg-light);
+}
+
+.value-card {
+  background-color: var(--bg-white);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.value-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border-top: 4px solid var(--secondary-color);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.value-card p {
+  color: var(--text-gray);
+  margin-bottom: 0;
+}
+
+/* Team Section */
+.team-section {
+  background-color: var(--bg-white);
+}
+
+.team-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+}
+
+.team-avatar {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.team-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  color: var(--text-gray);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Timeline Section */
+.timeline-section {
+  background-color: var(--bg-light);
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  margin-bottom: 2rem;
+  animation: slideInUp 0.6s ease-out;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 60px;
+  width: 2px;
+  height: calc(100% + 2rem);
+  background: var(--border-color);
+}
+
+.timeline-dot {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-content {
+  flex: 1;
+  background-color: var(--bg-white);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-content {
+  box-shadow: var(--shadow-lg);
+  transform: translateX(8px);
+}
+
+.timeline-content h4 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: var(--text-gray);
+  margin-bottom: 0;
+}
+
+/* Stats Section */
+.stats-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.stat-card {
+  text-align: center;
+  animation: slideInUp 0.6s ease-out;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  animation: slideInDown 0.6s ease-out;
+}
+
+.stat-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mission-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mission-icon {
+    font-size: 5rem;
+  }
+
+  .timeline-item {
+    gap: 1.5rem;
+  }
+
+  .timeline-dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-icon {
+    font-size: 3.5rem;
+  }
+
+  .timeline-item {
+    gap: 1rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-card p {
+    font-size: 0.9rem;
+  }
+}

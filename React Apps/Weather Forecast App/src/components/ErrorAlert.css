@@ -1,0 +1,41 @@
+.error-alert {
+  background: rgba(231, 76, 60, 0.2);
+  border: 1px solid var(--danger);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  animation: slideDown 0.3s ease;
+}
+
+.error-icon {
+  color: var(--danger);
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.error-alert h4 {
+  color: var(--danger);
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+}
+
+.error-alert p {
+  color: var(--text-light);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
