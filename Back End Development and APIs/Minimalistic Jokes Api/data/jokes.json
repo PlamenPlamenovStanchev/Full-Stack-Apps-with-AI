@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "The Programming Life",
+    "text": "Why do programmers prefer dark mode? Because light attracts bugs!",
+    "publishDate": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "title": "API Endpoint",
+    "text": "How many programmers does it take to change a light bulb? None, that's a hardware problem!",
+    "publishDate": "2024-01-14T14:20:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Database Humor",
+    "text": "A SQL query walks into a bar, walks up to two tables and asks... 'Can I join you?'",
+    "publishDate": "2024-01-13T09:15:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Version Control",
+    "text": "Git is a version control system. Git is also a joke control system. Every commit is a punchline!",
+    "publishDate": "2024-01-12T16:45:00Z"
+  },
+  {
+    "id": 5,
+    "title": "React Reality",
+    "text": "Why did React go to therapy? Because it had too many hooks!",
+    "publishDate": "2024-01-11T11:00:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Dumb Joke",
+    "text": "What is the one thing grandmothers fall in love with. Staircases",
+    "publishDate": "2026-05-01T12:41:58.634Z"
+  }
+]

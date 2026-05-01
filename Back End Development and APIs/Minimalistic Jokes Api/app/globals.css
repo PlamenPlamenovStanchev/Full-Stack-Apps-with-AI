@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #fafafa;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
