@@ -46,6 +46,18 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 </Link>
               );
             })}
+            {user?.isAdmin ? (
+              <Link
+                href="/admin"
+                className={`px-3 py-2 transition ${
+                  pathname === "/admin"
+                    ? "bg-zinc-950 text-white dark:bg-white dark:text-zinc-950"
+                    : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white"
+                }`}
+              >
+                Admin Panel
+              </Link>
+            ) : null}
           </nav>
 
           <div className="flex flex-wrap items-center gap-3 text-sm">

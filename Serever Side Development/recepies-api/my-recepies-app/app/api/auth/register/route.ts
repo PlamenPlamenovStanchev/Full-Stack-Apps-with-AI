@@ -54,6 +54,7 @@ export async function POST(request: Request) {
     .returning({
       id: users.id,
       email: users.email,
+      isAdmin: users.isAdmin,
       name: users.name,
     });
 

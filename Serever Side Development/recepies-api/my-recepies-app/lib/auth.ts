@@ -52,10 +52,17 @@ export async function getCurrentUser(request: NextRequest) {
     columns: {
       id: true,
       email: true,
+      isAdmin: true,
       name: true,
     },
     where: eq(users.id, payload.sub),
   });
 
   return user ?? null;
+}
+
+export async function getAdminUser(request: NextRequest) {
+  const user = await getCurrentUser(request);
+
+  return user?.isAdmin ? user : null;
 }

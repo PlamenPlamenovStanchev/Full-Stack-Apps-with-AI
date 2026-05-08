@@ -29,6 +29,7 @@ describe("auth core", () => {
     const token = signAuthToken({
       id: "user-1",
       email: "ava@example.com",
+      isAdmin: false,
       name: "Ava",
     });
     const payload = verifyAuthToken(token);
@@ -36,6 +37,7 @@ describe("auth core", () => {
     expect(payload).toMatchObject({
       sub: "user-1",
       email: "ava@example.com",
+      isAdmin: false,
       name: "Ava",
     });
   });
@@ -50,6 +52,7 @@ describe("auth core", () => {
     const token = signAuthToken({
       id: "user-1",
       email: "ava@example.com",
+      isAdmin: false,
       name: "Ava",
     });
 

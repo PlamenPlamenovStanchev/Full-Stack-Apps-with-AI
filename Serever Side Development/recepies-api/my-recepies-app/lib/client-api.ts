@@ -1,7 +1,12 @@
 export type User = {
   id: string;
   email: string;
+  isAdmin: boolean;
   name: string;
+};
+
+export type AdminUser = User & {
+  createdAt: string;
 };
 
 export type Recipe = {
@@ -206,6 +211,52 @@ export function uploadRecipePhoto(id: string, file: File, token: string) {
 
 export function removeRecipePhoto(id: string, token: string) {
   return apiFetch<{ photoUrl: null }>(`/api/recipes/${id}/photo`, {
+    method: "DELETE",
+    token,
+  });
+}
+
+export function getAdminRecipes(token: string) {
+  return apiFetch<{ recipes: Recipe[] }>("/api/admin/recipes", { token });
+}
+
+export function updateAdminRecipe(
+  id: string,
+  input: RecipeInput,
+  token: string,
+) {
+  return apiFetch<{ recipe: Recipe }>(`/api/admin/recipes/${id}`, {
+    method: "PUT",
+    token,
+    body: JSON.stringify(input),
+  });
+}
+
+export function deleteAdminRecipe(id: string, token: string) {
+  return apiFetch<{ message: string }>(`/api/admin/recipes/${id}`, {
+    method: "DELETE",
+    token,
+  });
+}
+
+export function getAdminUsers(token: string) {
+  return apiFetch<{ users: AdminUser[] }>("/api/admin/users", { token });
+}
+
+export function updateAdminUser(
+  id: string,
+  input: { name: string; isAdmin: boolean },
+  token: string,
+) {
+  return apiFetch<{ user: AdminUser }>(`/api/admin/users/${id}`, {
+    method: "PUT",
+    token,
+    body: JSON.stringify(input),
+  });
+}
+
+export function deleteAdminUser(id: string, token: string) {
+  return apiFetch<{ message: string }>(`/api/admin/users/${id}`, {
     method: "DELETE",
     token,
   });

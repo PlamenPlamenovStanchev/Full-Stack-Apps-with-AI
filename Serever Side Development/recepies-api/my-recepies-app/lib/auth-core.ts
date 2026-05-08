@@ -5,12 +5,14 @@ export type CurrentUser = {
   id: string;
   email: string;
   name: string;
+  isAdmin: boolean;
 };
 
 type JwtPayload = {
   sub: string;
   email: string;
   name: string;
+  isAdmin: boolean;
 };
 
 export function getJwtSecret() {
@@ -35,6 +37,7 @@ export function signAuthToken(user: CurrentUser) {
   return jwt.sign(
     {
       email: user.email,
+      isAdmin: user.isAdmin,
       name: user.name,
     },
     getJwtSecret(),
@@ -52,6 +55,7 @@ export function verifyAuthToken(token: string) {
     typeof payload !== "object" ||
     typeof payload.sub !== "string" ||
     typeof payload.email !== "string" ||
+    typeof payload.isAdmin !== "boolean" ||
     typeof payload.name !== "string"
   ) {
     return null;
